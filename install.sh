@@ -20,7 +20,7 @@ if uname | grep -q "Darwin" ; then
 fi
 
 # See if we're already installed
-SOURCE_CMD="source $ATOOLS_SCRIPTS_HOME/source_root.sh"
+SOURCE_CMD="source $ATOOLS_SCRIPTS_HOME/source-root.sh"
 
 if grep -q "$SOURCE_CMD" "$BASHRC" ; then
 	echo "Already installed to $BASHRC"
@@ -37,5 +37,5 @@ echo "$SOURCE_CMD" >> $BASHRC
 echo "Running post install commands"
 source $ATOOLS_SCRIPTS_HOME/once.sh
 if [ "$PLATFORM" == "Darwin" ] ; then
-	source $ATOOLS_SCRIPTS_HOME/once_mac.sh
+	source $ATOOLS_SCRIPTS_HOME/once-mac.sh
 fi

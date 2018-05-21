@@ -27,7 +27,7 @@ if ! ssh-find-agent -a ; then
 	source $ATOOLS_SCRIPTS_HOME/startup.sh
 
 	if [ "$PLATFORM" == "Darwin" ] ; then
-		source $ATOOLS_SCRIPTS_HOME/startup_mac.sh
+		source $ATOOLS_SCRIPTS_HOME/startup-mac.sh
 	fi
 fi
 

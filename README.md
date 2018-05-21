@@ -1,6 +1,6 @@
 # Adam's utility scripts
 
-## installation
+## Installation
 
 Run `install.sh`
 
