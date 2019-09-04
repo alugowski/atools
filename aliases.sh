@@ -8,3 +8,6 @@ alias detect_encoding="vim -c 'execute \"silent !echo \" . &fileencoding | q'"
 # see https://superuser.com/a/726295/129020
 alias clear="printf '\e]50;ClearScrollback\a'"
 
+# Mount a phone using simple-mtpfs
+# install using `brew install simple-mtpfs`. Might prompt an installation of OSXFuse.
+alias mount_phone_fg="simple-mtpfs -f ~/phone"
