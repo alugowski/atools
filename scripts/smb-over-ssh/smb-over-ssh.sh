@@ -30,7 +30,7 @@ createTunnel() {
 
     # Create tunnel to port 445 on remote host and make it available at port $LOCAL_SMB_PORT at localhost
     # Also tunnel ssh for connection testing purposes
-    ssh -gNf -L "$LOCAL_SMB_PORT:$SMB_HOST:$REMOTE_SMB_PORT" -C "$@"
+    ssh -gNf -L "$LOCAL_SMB_PORT:$SMB_HOST:$REMOTE_SMB_PORT" "$@"
 
     if [[ $? -eq 0 ]]; then
         # Register SMB as service via dns-sd
