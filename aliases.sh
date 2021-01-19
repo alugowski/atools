@@ -15,3 +15,18 @@ alias mount_phone_fg="simple-mtpfs -f ~/phone"
 # Remove the locked flag
 # This flag is set for files that were locked in-camera
 alias unlock="chflags -R nouchg"
+
+# Create and activate a new Python virtualenv, or activate an already existing one
+venv () {
+	if [ ! -d env/ ]; then
+		echo "Creating env/ ..."
+		python -m venv env
+
+		echo "Upgrading pip..."
+		source env/bin/activate
+		pip install --upgrade pip
+	fi
+
+	echo "Activating env..."
+	source env/bin/activate
+}
