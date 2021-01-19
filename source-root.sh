@@ -17,6 +17,9 @@ if uname | grep -q "Darwin" ; then
 fi
 
 source $ATOOLS_SCRIPTS_HOME/aliases.sh
+if [ "$PLATFORM" == "Darwin" ] ; then
+  source $ATOOLS_SCRIPTS_HOME/aliases-mac.sh
+fi
 
 # run startup-only scripts
 # use ssh-agent as a proxy for a marker of whether or not the startup scripts have been run
