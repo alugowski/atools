@@ -10,5 +10,9 @@ alias unlock="chflags -R nouchg"
 
 # Nassie access
 nassie-smb-over-ssh () {
-  $ATOOLS_SCRIPTS_HOME/scripts/smb-over-ssh/smb-over-ssh.sh nassie nlugowski
+  $ATOOLS_SCRIPTS_HOME/scripts/smb-over-ssh/smb-over-ssh.sh nassie -C nlugowski
+}
+
+kill-smb-over-ssh-tunnels () {
+  $ATOOLS_SCRIPTS_HOME/scripts/smb-over-ssh/smb-over-ssh.sh -k
 }
