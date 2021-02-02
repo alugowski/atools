@@ -1,7 +1,15 @@
 #!/bin/bash
 
-alias la="ls -la"
-alias psgrep="ps -A | grep"
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+alias ll='ls -la'
+alias psgrep='ps -A | grep'
+alias sha1='openssl sha1'
+alias lt='du -sh * | sort -h'
+alias gh='history | grep'
+
 
 # Wrap VIM's text encoding detector
 set +H  # disable history lookup so the !echo below doesn't get misinterpreted
