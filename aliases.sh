@@ -10,6 +10,8 @@ alias sha1='openssl sha1'
 alias lt='du -sh * | sort -h'
 alias gh='history | grep'
 
+# Print external IP address
+alias externalip='wget -qO - http://ipecho.net/plain ; echo'
 
 # Wrap VIM's text encoding detector
 set +H  # disable history lookup so the !echo below doesn't get misinterpreted
