@@ -17,3 +17,9 @@ for f in *.jpg *.mp4; do
 done
 ```
 
+# macOS
+
+Restart DNS:
+```bash
+sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder
+```
