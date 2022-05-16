@@ -23,3 +23,8 @@ Restart DNS:
 ```bash
 sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder
 ```
+
+Restart Logitech mouse daemon to fix no scroll:
+```bash
+kill $(ps aux | grep LogiMgrDaemon.app | awk 'FNR == 1 {print $2}')
+```
