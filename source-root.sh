@@ -35,4 +35,4 @@ if ! ssh-find-agent -a ; then
 fi
 
 # bash prompt
-source $ATOOLS_SCRIPTS_HOME/prompt.sh
+source $ATOOLS_SCRIPTS_HOME/prompt-bash.sh
