@@ -16,3 +16,7 @@ nassie-smb-over-ssh () {
 kill-smb-over-ssh-tunnels () {
   $ATOOLS_SCRIPTS_HOME/scripts/smb-over-ssh/smb-over-ssh.sh -k
 }
+
+# Restart Logitech Options. Useful if the Logitech mouse scroll wheel stops working.
+alias logirestart="kill $(ps aux | grep LogiMgrDaemon.app | awk 'FNR == 1 {print $2}')"
+
