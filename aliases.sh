@@ -23,15 +23,30 @@ alias clear="printf '\e]50;ClearScrollback\a'"
 
 # Create and activate a new Python virtualenv, or activate an already existing one
 venv () {
-	if [ ! -d env/ ]; then
-		echo "Creating env/ ..."
-		python -m venv env
+	ENVDIR="venv"
+	if [ -d env ]; then
+		ENVDIR="env"
+	fi
+
+	if [ ! -d "$ENVDIR/" ]; then
+		if command -v python &> /dev/null
+		then
+			PYTHON="python"
+			PIP="pip"
+		else
+			PYTHON="python3"
+			PIP="pip3"
+		fi
+
+
+		echo "Creating $ENVDIR/ ..."
+		$PYTHON -m venv $ENVDIR
 
 		echo "Upgrading pip..."
-		source env/bin/activate
-		pip install --upgrade pip
+		source $ENVDIR/bin/activate
+		$PIP install --upgrade pip
 	fi
 
 	echo "Activating env..."
-	source env/bin/activate
+	source $ENVDIR/bin/activate
 }
