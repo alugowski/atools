@@ -11,16 +11,19 @@ sdk_dir="$( command cd -P "$apparent_sdk_dir" > /dev/null && command pwd -P )"
 
 ATOOLS_SCRIPTS_HOME="$sdk_dir"
 
-# Figure out where to install to: .bash_profile in Mac, else .bashrc
+# Figure out where to install to: .zshrc in Mac, else .bashrc
 PLATFORM="Linux"
 BASHRC=~/.bashrc
+SOURCE_ROOT_SUFFIX=""
 if uname | grep -q "Darwin" ; then
-	BASHRC=~/.bash_profile
+	# BASHRC=~/.bash_profile
+	BASHRC=~/.zshrc
 	PLATFORM="Darwin"
+	SOURCE_ROOT_SUFFIX="-zsh"
 fi
 
 # See if we're already installed
-SOURCE_CMD="source $ATOOLS_SCRIPTS_HOME/source-root.sh"
+SOURCE_CMD="source $ATOOLS_SCRIPTS_HOME/source-root${SOURCE_ROOT_SUFFIX}.sh"
 
 if grep -q "$SOURCE_CMD" "$BASHRC" ; then
 	echo "Already installed to $BASHRC"

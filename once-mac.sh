@@ -12,3 +12,7 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `glyv`
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 
+# Needed packages
+echo
+echo "!! Run this: !!"
+echo "brew install zsh-git-prompt"
