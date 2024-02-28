@@ -8,7 +8,7 @@ alias ll='ls -la'
 alias psgrep='ps -A | grep'
 alias sha1='openssl sha1'
 alias lt='du -sh * | sort -h'
-alias gh='history | grep'
+#alias gh='history | grep'
 
 # Print external IP address
 alias externalip='wget -qO - http://ipecho.net/plain ; echo'
