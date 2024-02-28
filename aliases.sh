@@ -24,7 +24,9 @@ alias clear="printf '\e]50;ClearScrollback\a'"
 # Create and activate a new Python virtualenv, or activate an already existing one
 venv () {
 	ENVDIR="venv"
-	if [ -d env ]; then
+	if [ -d .venv ]; then
+		ENVDIR=".venv"
+	elif [ -d env ]; then
 		ENVDIR="env"
 	fi
 
@@ -47,6 +49,6 @@ venv () {
 		$PIP install --upgrade pip
 	fi
 
-	echo "Activating env..."
+	echo "Activating $ENVDIR"
 	source $ENVDIR/bin/activate
 }
