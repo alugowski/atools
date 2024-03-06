@@ -23,7 +23,7 @@ alias clear="printf '\e]50;ClearScrollback\a'"
 
 # Create and activate a new Python virtualenv, or activate an already existing one
 venv () {
-	ENVDIR="venv"
+	ENVDIR="${1:-venv}"
 	if [ -d .venv ]; then
 		ENVDIR=".venv"
 	elif [ -d env ]; then
