@@ -6,4 +6,6 @@ echo
 echo "Setup ssh-agent"
 eval $(ssh-agent -s)
 
-ssh-add ~/.ssh/google_compute_engine
+if [ -f ~/.ssh/google_compute_engine ]; then
+	ssh-add ~/.ssh/google_compute_engine
+fi
